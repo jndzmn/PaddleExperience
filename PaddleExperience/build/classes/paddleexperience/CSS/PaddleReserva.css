@@ -1,0 +1,183 @@
+/*Estil general*/
+
+#fons {
+    -fx-background-color: #263238;
+}
+
+#fons_Flotant {
+    -fx-background-color:  #37474F;
+    -fx-background-radius: 3;
+    -fx-border-color: #78909C;
+    -fx-border-radius: 3;
+    -fx-effect:  dropshadow( gaussian, rgba(28,28,28), 10, 0.3, 0.0, 0.0 );
+    -fx-opacity: 0.75;
+}
+
+/*Estil text*/
+
+#text_Info {
+    -fx-fill: #FAFAFA;
+    -fx-font-family:"Ubuntu Light";
+    -fx-font-size: 16px;
+}
+
+#text_Info_Big {
+    -fx-fill: #FAFAFA;
+    -fx-font-family:"Ubuntu Light";
+    -fx-font-size: 25px;
+}
+
+/*Estil botons*/
+
+.button {
+    -fx-font: "Ubuntu Light"; /*SOLUCIONAR LIGHT-MEDIUM*/
+    -fx-text-alignment: center;
+}
+
+#button_IniciSessio {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FAFAFA;
+    -fx-font-weight: light;
+}
+
+#button_IniciSessio:hover {
+    -fx-background-color:#78909c;
+    -fx-text-fill:#FDFDFD;
+    -fx-opacity:0.5;
+}
+
+#button_TextBenvinguda {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FAFAFA;
+}
+
+#button_TextBenvinguda:hover {
+    -fx-text-fill:#78909C;
+}
+
+#button_Continuar {
+    -fx-background-radius: 2;
+    -fx-background-color: #263238;
+    -fx-text-fill: #FAFAFA;
+    -fx-text-alignment: center;
+}
+
+#button_Enrere {
+    -fx-background-color: transparent;
+    -fx-text-fill: #FAFAFA;
+    -fx-text-alignment: center;
+    -fx-font-size:28px;
+}
+
+#move_Hora:hover {
+    -fx-effect: dropshadow( one-pass-box , rgba(255,255,255,0.5) , 0, 0.0 , 0 , 1);
+}
+
+/*Estil text-field*/
+#jfx_Formulari {
+    -fx-text-fill: #FAFAFA;
+    -fx-prompt-text-fill: #FAFAFA;
+}
+
+/*Estil date-picker*/
+.date-picker {
+    -fx-color: #37474F;
+    -fx-background-color: #37474F;
+    -fx-background-radius: 3;
+    -fx-border-color: #263238;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+}
+
+/*Estil check-box*/
+.check-box {
+    -fx-text-fill: #FAFAFA;
+    -fx-font-family:"Ubuntu Light";
+    -fx-font-size: 13px;
+}
+
+/*Estil table-view*/
+
+.table-view{
+    -fx-background-color:  #37474F;
+    -fx-background-radius: 3;
+    -fx-border-color: #78909C;
+    -fx-border-radius: 3;
+    -fx-effect:  dropshadow( gaussian, rgba(28,28,28), 10, 0.3, 0.0, 0.0 );
+    -fx-opacity: 0.75;
+    /*-fx-cursor: hand;*/
+}
+
+.table-view .filler {
+    -fx-background-fills: #37474F;
+    -fx-background-color: #37474F;
+}
+
+
+.table-cell * {
+    -fx-background-color: transparent;
+    -fx-font-family: "Ubunt Light";
+    -fx-font-size: 16px;
+    -fx-fill: #FAFAFA;
+    -fx-text-alignment: CENTER;
+    -fx-cursor: hand;
+}
+
+.table-view .column-header{
+    -fx-background-color: transparent;
+    -fx-size: 45.0px;
+    -fx-min-height: 45.0px;
+    /*-fx-cursor: hand;*/
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 15px;
+    -fx-font-family: "Ubuntu Light";
+    -fx-text-fill: #FAFAFA;
+
+    -fx-background-color:#37474F;
+    -fx-border-color: #37474F;
+
+    -fx-alignment: CENTER;
+    -fx-padding: 5.0 5.0 5.0 5.0;
+}
+
+.scroll-bar:vertical .track{
+    -fx-background-color : #37474F;
+    -fx-border-color :#37474F;
+    -fx-background-radius : 0px;
+    -fx-border-radius :3px;
+}
+
+.scroll-bar:vertical .increment-button ,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color :#37474F;
+    -fx-background-radius : 0px;
+    -fx-padding :0.0 10.0 0.0 0.0;
+
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.15em 0.0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow{
+    -fx-shape : " ";
+    -fx-padding :0.0 0.15em;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color :derive(black,90.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
+
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color :derive(#4D4C4F,10.0%);
+    -fx-background-insets : 2.0, 0.0, 0.0;
+    -fx-background-radius : 2.0em;
+}
