@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="fons" prefHeight="550.0" prefWidth="670.0" stylesheets="@CSS/PaddleReserva.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="paddleexperience.FXMLHistoricoController">
+   <children>
+      <GridPane layoutX="212.0" layoutY="230.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="NEVER" maxWidth="156.0" minWidth="0.0" prefWidth="20.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="617.0" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="217.0" minWidth="1.0" prefWidth="22.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="50.0" vgrow="NEVER" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="204.0" vgrow="ALWAYS" />
+            <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="43.0" vgrow="NEVER" />
+          <RowConstraints maxHeight="1.7976931348623157E308" minHeight="10.0" prefHeight="241.0" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="105.0" minHeight="0.0" prefHeight="50.0" vgrow="NEVER" />
+        </rowConstraints>
+         <children>
+            <AnchorPane minWidth="10.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Text id="text_Info" layoutX="14.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pròximes partides:" />
+                  <TableView fx:id="tableView_Proximes" cache="true" cacheHint="SCALE" fixedCellSize="30.0" layoutX="14.0" layoutY="44.0" minWidth="190.0" prefHeight="174.0" prefWidth="589.0" style="-fx-fixed-cell-size: 30;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="44.0">
+                    <columns>
+                      <TableColumn fx:id="tablecolumn_dia_proxim" minWidth="45.0" prefWidth="135.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Dia" />
+                      <TableColumn fx:id="tablecolumn_hora_inici_proxim" minWidth="25.0" prefWidth="93.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Hora inici" />
+                        <TableColumn fx:id="tablecolumn_hora_fi_proxim" prefWidth="97.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Hora fi" />
+                        <TableColumn fx:id="tablecolumn_pista_proxim" prefWidth="100.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Pista" />
+                        <TableColumn fx:id="tablecolumn_pagada_proxim" prefWidth="98.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Pagada?" />
+                        <TableColumn fx:id="tablecolumn_cancelar_proxim" minWidth="40.0" prefWidth="131.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Cancel·lar" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Text fill="#fafafa" layoutX="14.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Només es poden cancel·lar les reserves amb més de 24 hores d'antelació)" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="24.9716796875">
+                     <font>
+                        <Font name="Ubuntu Light" size="13.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="226.0" prefWidth="619.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Text id="text_Info" layoutX="14.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Últimes partides jugades:" />
+                  <TableView fx:id="tableView_Ultimes" cache="true" fixedCellSize="30.0" layoutX="14.0" layoutY="42.0" minWidth="190.0" prefHeight="174.0" prefWidth="589.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="16.0" AnchorPane.topAnchor="44.0">
+                     <columns>
+                        <TableColumn fx:id="tablecolumn_dia_jugades" prefWidth="150.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Dia" />
+                        <TableColumn fx:id="tablecolumn_hora_inici_jugades" prefWidth="150.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Hora inici" />
+                        <TableColumn fx:id="tablecolumn_hora_fi_jugades" prefWidth="150.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Hora fi" />
+                        <TableColumn fx:id="tablecolumn_pista_jugades" prefWidth="150.0" style="-fx-background-color: #37474F; -fx-background-radius: 0; -fx-fill-color: #FAFAFA; -fx-text-fill: #FAFAFA; -fx-fill: #FAFAFA; -fx-text-align: CENTER; -fx-alignment: CENTER;" text="Pista" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <HBox fx:id="hbox_no_targeta" alignment="CENTER" maxWidth="1.7976931348623157E308" prefHeight="36.0" prefWidth="629.0" spacing="50.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets top="10.0" />
+               </GridPane.margin>
+               <children>
+                  <Text fill="#ff5724bf" strokeType="OUTSIDE" strokeWidth="0.0" text="No has afegit una targeta de crèdit, i per tant no pots pagar" textAlignment="CENTER" wrappingWidth="371.40283203125">
+                     <font>
+                        <Font name="Ubuntu Light" size="14.0" />
+                     </font></Text>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onMouseClicked="#on_click_add_card" prefHeight="31.0" prefWidth="146.0" style="-fx-background-color: #37474f;" text="Afegir targeta" textFill="#fafafa">
+                     <font>
+                        <Font name="Ubuntu Light" size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </HBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
